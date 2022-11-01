@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Keranjang Belanja</title>
+    <!-- CSS only -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+      crossorigin="anonymous"
+    />
+    <style>
+      .form-check{
+  padding-left: 7rem;
+}
+
+body {
+  background: linear-gradient(to top right,#b0b0b0,#ffffff);
+  color: black;
+}
+
+.dark-mode {
+  background: linear-gradient(to top right,#000000,#b0b0b0);
+  color: white;
+}
+    </style>
+  </head>
+  <!-- <body id="body">
+    <div class="form-check form-switch" onchange="bg()" id="bg">
+      <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked>
+      <label class="form-check-label" for="flexSwitchCheckChecked">Dark/Light mode</label>
+    </div> -->
+    
+    <!-- <button onclick="myFunction()">Toggle dark mode</button> -->
+
+    <div class="form-check form-switch" onclick="myFunction()">
+      <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked>
+      <label class="form-check-label" for="flexSwitchCheckChecked">Dark and Light mode</label>
+    </div>
+
+    <center><h1 style="padding-top: 5rem">Keranjang Belanja</h1></center>
+
+    <!-- formulir -->
+    <div class="container">
+      <hr />
+      <form class="row g-3">
+        <!-- Bolpoin -->
+        <h3 style="padding-right: 7rem">Bolpoin</h3>
+        <div class="col-md-6">
+          <label for="jumlahBolpoin" class="form-label"
+            >Jumlah Bolpoin yang anda Beli</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            id="jumlahBolpoin"
+            placeholder="Masukkan Jumlah"
+            value="0"
+          />
+        </div>
+        <hr />
+
+
+        <!-- Buku -->
+        <h3 style="padding-right: 7rem">Buku</h3>
+        <div class="col-md-6">
+          <label for="jumlahBuku" class="form-label"
+            >Jumlah Buku yang anda Beli</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            id="jumlahBuku"
+            placeholder="Masukkan Jumlah"
+            value="0"
+          />
+        </div>
+        <hr />
+
+
+        <!-- Pensil -->
+        <h3 style="padding-right: 7rem">Pensil</h3>
+        <div class="col-md-6">
+          <label for="jumlahPensil" class="form-label"
+            >Jumlah Pensil yang anda Beli</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            id="jumlahPensil"
+            placeholder="Masukkan Jumlah"
+            value="0"
+          />
+        </div>
+        <hr />
+
+
+        <!-- Penghapus -->
+        <h3 style="padding-right: 7rem">Penghapus</h3>
+        <div class="col-md-6">
+          <label for="jumlahPenghapus" class="form-label"
+            >Jumlah Penghapus yang anda Beli</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            id="jumlahPenghapus"
+            placeholder="Masukkan Jumlah"
+            value="0"
+          />
+        </div>
+        <hr />
+        
+        <!-- Diskon -->
+        <h3 style="padding-right: 7rem">Diskon</h3>
+        <div class="col-md-6">
+          <label for="exampleInputEmail1" class="form-label"
+            >Diskon dalam Persen</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            id="jumlahDiskon"
+            placeholder="Masukkan Jumlah Diskon"
+            value="0"
+          />
+        </div>
+        <hr />
+
+        <center>
+          <button
+            type="button"
+            class="btn btn-primary mb-3"
+            onclick="jumlah()"
+          >
+            Hitung
+          </button>
+        </center>
+        <label for="">Total = Rp.<label id="total"></label></label>
+        <label for="">Diskon = <label id="diskon"></label><label for="">%</label></label>
+        <label for="">Total Yang Harus Dibayar = Rp.<label id="totaljumlah"></label></label>
+        
+        <hr />
+      </form>
+    </div>
+
+    <!-- JavaScript Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      function bolpoin() {
+  let jmlhBolpoin = parseInt(document.getElementById('jumlahBolpoin').value);
+  let total= jmlhBolpoin * 2000;
+  return total;
+}
+
+function buku() {
+  let jmlhBuku = parseInt(document.getElementById('jumlahBuku').value);
+  let total= jmlhBuku * 5000;
+  return total;
+}
+
+function pensil() {
+  let jmlhPensil = parseInt(document.getElementById('jumlahPensil').value);
+  let total= jmlhPensil * 2000;
+  return total;
+}
+
+function penghapus() {
+  let jmlhPenghapus = parseInt(document.getElementById('jumlahPenghapus').value);
+  let total= jmlhPenghapus * 1000;
+  return total;
+}
+
+function diskon() {
+  let jmlhDiskon = document.getElementById('jumlahDiskon').value;
+  let total= jmlhDiskon / 100;
+  return total;
+}
+
+function jumlah() {
+  let total = document.getElementById('total');
+  let diskonjumlah = document.getElementById('diskon');
+  let totaljumlah = document.getElementById('totaljumlah');
+  let totalharga = bolpoin() + buku() + pensil() + penghapus();
+  let diskonawal = totalharga * diskon();
+  let totalsemua = totalharga - diskonawal;
+  total.innerHTML = totalharga;
+  diskonjumlah.innerHTML = document.getElementById('jumlahDiskon').value;
+  totaljumlah.innerHTML= totalsemua;
+
+}
+
+//black and light background
+function myFunction() {
+  var element = document.body;
+  element.classList.toggle("dark-mode");
+}
+    </script>
+  </body>
+</html>

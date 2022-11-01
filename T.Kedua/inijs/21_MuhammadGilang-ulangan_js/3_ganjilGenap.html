@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ganjil Genap</title>
+</head>
+<body>
+  <input type="number" id="nilai">
+  <button type="button" onclick="ceknilai()">Cek nilai</button>
+
+
+
+<script>
+function ceknilai() {
+  var nilai = document.getElementById('nilai').value;
+  if (nilai % 2 === 0) {
+    alert(nilai + ' Adalah nilai genap')
+  } else {
+    alert(nilai + ' Adalah nilai ganjil')
+  }
+}
+</script>
+</body>
+</html>

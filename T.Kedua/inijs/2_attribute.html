@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Perkenalan JavaScript</title>
+</head>
+<body>
+
+<button onclick="alert('ILY')">
+    Click Aku Dong!!!
+</button>
+
+
+<form>
+    <select name="Pelawak" onChange="tampil(this.value)">
+        <option value=""></option>
+        <option value="Jidan">Jidan</option>
+        <option value="Udin">Samsudin</option>
+    </select>
+</form>
+
+
+<script>
+    function tampil(Pelawak)
+    {
+        switch(Pelawak)
+        {
+            case "Jidan" : {
+                alert("hooh iyohhh");
+            }
+            break;
+            case "Udin" : {
+                alert("terkadang kadang");
+            }
+        }
+    }
+</script>
+</body>
+</html>

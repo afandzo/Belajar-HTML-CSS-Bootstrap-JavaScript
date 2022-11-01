@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>lat bootstrap</title>
+	<link rel="stylesheet" type="text/css" href="bootstrap-5.0.2-dist/css/bootstrap.min.css">
+	<style type="text/css">
+		body {
+		background: linear-gradient(to top right,#b0b0b0,#ffffff);
+		}
+
+		.nav-item{
+			color: #00A7E6;
+		}
+
+		.jumbotron{
+			padding-top: 6rem;
+			background-color: #b0b0b0;
+			
+		}
+
+		#galery{
+			background-color: #b0b0b0;
+		}
+
+		.c1{
+			width: 50px;
+			height: 100;
+			margin: 20px;
+		}
+
+		section{
+			padding-top: 5rem;
+		}
+
+		#container {
+			width: 1000px;
+			margin: 20px auto;
+		}
+		.ck-editor__editable[role="textbox"] {
+			/* editing area */
+			min-height: 200px;
+		}
+		.ck-content .image {
+			/* block images */
+			max-width: 80%;
+			margin: 20px auto;
+		}
+	</style>
+</head>
+<body id="home">
+<!-- navbars -->
+<nav class="navbar navbar-expand-lg navbar-dark shadow-sm fixed-top" style="background-color: #000000;" >
+	<div class="container">
+		<a class="navbar-brand" style="color: #b0b0b0;" href="#">Afandzo</a>
+		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+		<span class="navbar-toggler-icon"></span>
+		</button class="text-end">
+		<div class="collapse navbar-collapse" id="navbarNav">
+			<ul class="navbar-nav ms-auto" >
+				<li class="nav-item">
+					<a class="nav-link" aria-current="page" href="b1.html#home" >Home</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="b1.html#about" >About</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="b1.html#galery" >Galery</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="b1.html#contact">Contact</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="tabel.html" >Table</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link active" href="form.html" >Form</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="math.html" >Matematika</a>
+				</li>
+				<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+					  Belajar JavaScript
+					</a>
+					<ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
+						  <li><a class="dropdown-item" href="inijs/1_perkenalanjs.html">Perkenalan JS</a></li>
+						  <li><a class="dropdown-item" href="inijs/2_attribute.html">Attribute JS</a></li>
+						  <li><a class="dropdown-item" href="#">Something else here</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</div>
+</nav>
+<!-- akhir navbars -->
+
+<!-- formulir -->
+<div class="container" style="padding-top: 5rem;">
+	<form class="row g-9">
+	  <div class=" col-md-6">
+	     <label for="exampleInputEmail1" class="form-label">Nama Depan</label>
+	     <input type="text" class="form-control" id="exampleInputFirstName">
+	  </div>
+	  <div class="col-md-6">
+	     <label for="exampleInputPassword1" class="form-label">Nama Belakang</label>
+	     <input type="text" class="form-control" id="exampleInputLastName">
+	  </div>
+	  <div class=" col-md-12">
+		<label for="exampleInputEmail1" class="form-label">Email address</label>
+		<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+	 </div>
+	 <div class="col-md-12">
+		<label for="exampleInputPassword1" class="form-label">Password</label>
+		<input type="password" class="form-control" id="exampleInputPassword1">
+	 </div>
+	 <div class="col-md-6">
+		<label for="exampleInputPassword1" class="form-label">No.HP</label>
+		<input type="text" class="form-control" id="exampleInputPassword1">
+	 </div>
+
+	 <div class="col-md-6">
+			<label for="inputState" class="form-label">Agama</label>
+			<select id="inputState" class="form-select">
+			<option selected>Pilih agama anda...</option>
+			<option>Islam</option>
+			<option>Kristen</option>
+			<option>Katholik</option>
+			<option>Buddha</option>
+			<option>Hindu</option>
+			<option>Konghuchu</option>
+			</select>
+	 </div>
+	  
+	 <div class="mb-3">
+		<label for="exampleFormControlTextarea1" class="form-label">Alamat</label>
+		<textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+	  </div>
+
+
+	 <!-- textarea editor awal -->
+		<div id="container">
+			<div id="editor"></div>
+		</div>
+		<!--
+			The "super-build" of CKEditor 5 served via CDN contains a large set of plugins and multiple editor types.
+			See https://ckeditor.com/docs/ckeditor5/latest/installation/getting-started/quick-start.html#running-a-full-featured-editor-from-cdn
+		-->
+		<script src="https://cdn.ckeditor.com/ckeditor5/35.0.1/super-build/ckeditor.js"></script>
+		<!--
+			Uncomment to load the Spanish translation
+			<script src="https://cdn.ckeditor.com/ckeditor5/35.0.1/super-build/translations/es.js"></script>
+		-->
+		<script>
+			// This sample still does not showcase all CKEditor 5 features (!)
+			// Visit https://ckeditor.com/docs/ckeditor5/latest/features/index.html to browse all the features.
+			CKEDITOR.ClassicEditor.create(document.getElementById("editor"), {
+				// https://ckeditor.com/docs/ckeditor5/latest/features/toolbar/toolbar.html#extended-toolbar-configuration-format
+				toolbar: {
+					items: [
+						'exportPDF','exportWord', '|',
+						'findAndReplace', 'selectAll', '|',
+						'heading', '|',
+						'bold', 'italic', 'strikethrough', 'underline', 'code', 'subscript', 'superscript', 'removeFormat', '|',
+						'bulletedList', 'numberedList', 'todoList', '|',
+						'outdent', 'indent', '|',
+						'undo', 'redo',
+						'-',
+						'fontSize', 'fontFamily', 'fontColor', 'fontBackgroundColor', 'highlight', '|',
+						'alignment', '|',
+						'link', 'insertImage', 'blockQuote', 'insertTable', 'mediaEmbed', 'codeBlock', 'htmlEmbed', '|',
+						'specialCharacters', 'horizontalLine', 'pageBreak', '|',
+						'textPartLanguage', '|',
+						'sourceEditing'
+					],
+					shouldNotGroupWhenFull: true
+				},
+				// Changing the language of the interface requires loading the language file using the <script> tag.
+				// language: 'es',
+				list: {
+					properties: {
+						styles: true,
+						startIndex: true,
+						reversed: true
+					}
+				},
+				// https://ckeditor.com/docs/ckeditor5/latest/features/headings.html#configuration
+				heading: {
+					options: [
+						{ model: 'paragraph', title: 'Paragraph', class: 'ck-heading_paragraph' },
+						{ model: 'heading1', view: 'h1', title: 'Heading 1', class: 'ck-heading_heading1' },
+						{ model: 'heading2', view: 'h2', title: 'Heading 2', class: 'ck-heading_heading2' },
+						{ model: 'heading3', view: 'h3', title: 'Heading 3', class: 'ck-heading_heading3' },
+						{ model: 'heading4', view: 'h4', title: 'Heading 4', class: 'ck-heading_heading4' },
+						{ model: 'heading5', view: 'h5', title: 'Heading 5', class: 'ck-heading_heading5' },
+						{ model: 'heading6', view: 'h6', title: 'Heading 6', class: 'ck-heading_heading6' }
+					]
+				},
+				// https://ckeditor.com/docs/ckeditor5/latest/features/editor-placeholder.html#using-the-editor-configuration
+				placeholder: 'Tulis tantang kamu disini!',
+				// https://ckeditor.com/docs/ckeditor5/latest/features/font.html#configuring-the-font-family-feature
+				fontFamily: {
+					options: [
+						'default',
+						'Arial, Helvetica, sans-serif',
+						'Courier New, Courier, monospace',
+						'Georgia, serif',
+						'Lucida Sans Unicode, Lucida Grande, sans-serif',
+						'Tahoma, Geneva, sans-serif',
+						'Times New Roman, Times, serif',
+						'Trebuchet MS, Helvetica, sans-serif',
+						'Verdana, Geneva, sans-serif'
+					],
+					supportAllValues: true
+				},
+				// https://ckeditor.com/docs/ckeditor5/latest/features/font.html#configuring-the-font-size-feature
+				fontSize: {
+					options: [ 10, 12, 14, 'default', 18, 20, 22 ],
+					supportAllValues: true
+				},
+				// Be careful with the setting below. It instructs CKEditor to accept ALL HTML markup.
+				// https://ckeditor.com/docs/ckeditor5/latest/features/general-html-support.html#enabling-all-html-features
+				htmlSupport: {
+					allow: [
+						{
+							name: /.*/,
+							attributes: true,
+							classes: true,
+							styles: true
+						}
+					]
+				},
+				// Be careful with enabling previews
+				// https://ckeditor.com/docs/ckeditor5/latest/features/html-embed.html#content-previews
+				htmlEmbed: {
+					showPreviews: true
+				},
+				// https://ckeditor.com/docs/ckeditor5/latest/features/link.html#custom-link-attributes-decorators
+				link: {
+					decorators: {
+						addTargetToExternalLinks: true,
+						defaultProtocol: 'https://',
+						toggleDownloadable: {
+							mode: 'manual',
+							label: 'Downloadable',
+							attributes: {
+								download: 'file'
+							}
+						}
+					}
+				},
+				// https://ckeditor.com/docs/ckeditor5/latest/features/mentions.html#configuration
+				mention: {
+					feeds: [
+						{
+							marker: '@',
+							feed: [
+								'@apple', '@bears', '@brownie', '@cake', '@cake', '@candy', '@canes', '@chocolate', '@cookie', '@cotton', '@cream',
+								'@cupcake', '@danish', '@donut', '@dragée', '@fruitcake', '@gingerbread', '@gummi', '@ice', '@jelly-o',
+								'@liquorice', '@macaroon', '@marzipan', '@oat', '@pie', '@plum', '@pudding', '@sesame', '@snaps', '@soufflé',
+								'@sugar', '@sweet', '@topping', '@wafer'
+							],
+							minimumCharacters: 1
+						}
+					]
+				},
+				// The "super-build" contains more premium features that require additional configuration, disable them below.
+				// Do not turn them on unless you read the documentation and know how to configure them and setup the editor.
+				removePlugins: [
+					// These two are commercial, but you can try them out without registering to a trial.
+					// 'ExportPdf',
+					// 'ExportWord',
+					'CKBox',
+					'CKFinder',
+					'EasyImage',
+					// This sample uses the Base64UploadAdapter to handle image uploads as it requires no configuration.
+					// https://ckeditor.com/docs/ckeditor5/latest/features/images/image-upload/base64-upload-adapter.html
+					// Storing images as Base64 is usually a very bad idea.
+					// Replace it on production website with other solutions:
+					// https://ckeditor.com/docs/ckeditor5/latest/features/images/image-upload/image-upload.html
+					// 'Base64UploadAdapter',
+					'RealTimeCollaborativeComments',
+					'RealTimeCollaborativeTrackChanges',
+					'RealTimeCollaborativeRevisionHistory',
+					'PresenceList',
+					'Comments',
+					'TrackChanges',
+					'TrackChangesData',
+					'RevisionHistory',
+					'Pagination',
+					'WProofreader',
+					// Careful, with the Mathtype plugin CKEditor will not load when loading this sample
+					// from a local file system (file://) - load this site via HTTP server if you enable MathType
+					'MathType'
+				]
+			});
+		</script>
+		<!-- textarea editor akhir -->
+		
+	  <button type="submit" class="btn btn-dark">Kirim!</button>
+	</form>
+</div>
+
+<!-- akhir formulir -->
+
+<!-- contact -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#000000" fill-opacity="1" d="M0,64L34.3,53.3C68.6,43,137,21,206,48C274.3,75,343,149,411,165.3C480,181,549,139,617,138.7C685.7,139,754,181,823,192C891.4,203,960,181,1029,154.7C1097.1,128,1166,96,1234,85.3C1302.9,75,1371,85,1406,90.7L1440,96L1440,320L1405.7,320C1371.4,320,1303,320,1234,320C1165.7,320,1097,320,1029,320C960,320,891,320,823,320C754.3,320,686,320,617,320C548.6,320,480,320,411,320C342.9,320,274,320,206,320C137.1,320,69,320,34,320L0,320Z"></path></svg>
+<section id="contact" style="background-color: #000000;">
+	<div class="container">
+		<div class="row text-center text-white">
+			<div class="col">
+				<h2>Contact Me</h2>
+			</div>
+		</div>
+		<div class="row justify-content-center">
+			<div class="col-md-1">
+					<a href="https://www.facebook.com/profile.php?id=100052868117972"><img src="logo/fb.jpeg" class="c1"></a>
+			</div>
+			<div class="col-md-1">
+					<a href="https://wa.me/6281215912946"><img src="logo/wa.jpeg" class="c1"></a>
+			</div>
+			<div class="col-md-1">
+					<a href="https://instagram.com/afandzo?igshid=YmMyMTA2M2Y="><img src="logo/ig.jpeg" class="c1"></a>
+			</div>
+		</div>
+	</div>	
+</section>
+<!-- akhir concact -->
+
+<!-- footer -->
+<footer class="text-center text-white pb-3" style="background-color: #000000;">
+	<div><p>&copy; Copyright <a href="https://instagram.com/afandzo?igshid=YmMyMTA2M2Y=" class="text-white fw-bold">AFANDI</a>. All Rights Reserved</p></div>
+</footer>
+<!-- akhir footer -->
+<script src="bootstrap-5.0.2-dist/js/bootstrap.min.js"></script>
+</body>
+</html>

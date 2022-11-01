@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Formulir</title>
+	<!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+	<style type="text/css">
+		
+
+		.nav-item{
+			color: #00A7E6;
+		}
+
+		.c1{
+			width: 50px;
+			height: 100;
+			margin: 20px;
+		}
+
+		section{
+			padding-top: 5rem;
+		}
+
+		#container {
+			width: 1000px;
+			margin: 20px auto;
+		}
+	</style>
+</head>
+<body>
+
+
+<!-- formulir -->
+<div class="container" style="padding-top: 5rem;">
+	<form class="row g-9">
+	  <div class=" col-md-6">
+	     <label for="nama" class="form-label">Nama</label>
+	     <input type="text" class="form-control" id="nama">
+	  </div>
+	  <div class="col-md-6">
+	     <label for="absen" class="form-label">No Absen</label>
+	     <input type="number" class="form-control" id="absen">
+	  </div>
+	  <div class=" col-md-12">
+		<label for="email" class="form-label">Email address</label>
+		<input type="email" class="form-control" id="email" aria-describedby="emailHelp">
+	 </div>
+	 <div class="col-md-6">
+		<label for="nohp" class="form-label">No.HP</label>
+		<input type="text" class="form-control" id="nohp">
+	 </div>
+
+	 <div class="col-md-6">
+			<label for="kelas" class="form-label">Kelas</label>
+			<select id="kelas" class="form-select">
+			<option>XI MA</option>
+			<option>XI MB</option>
+			<option>XI MC</option>
+			<option>XI TA</option>
+			<option>XI TB</option>
+			<option>XI TC</option>
+			<option>XI OA</option>
+			<option>XI OB</option>
+			<option>XI OC</option>
+			<option>XI RA</option>
+			<option>XI RB</option>
+			<option>XI RC</option>
+			</select>
+	 </div>
+	  
+	 <div class="mb-3">
+		<label for="exampleFormControlTextarea1" class="form-label">Alamat</label>
+		<textarea class="form-control" id="alamat" rows="3"></textarea>
+	  </div>
+	</form>
+</div>
+<center><button type="button" class="btn btn-dark mb-3" onclick="data()">Kirim!</button></center>
+<!-- akhir formulir -->
+
+<label for="">Nama = <label id="hasilnama"></label></label><br>
+<label for="">No Absen = <label id="hasilabsen"></label></label><br>
+<label for="">Email = <label id="hasilemail"></label></label><br>
+<label for="">No HP = <label id="hasilnohp"></label></label><br>
+<label for="">Kelas = <label id="hasilkelas"></label></label><br>
+<label for="">Alamat = <label id="hasilalamat"></label></label><br>
+
+
+
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+<script>
+function data() {
+  let nama = document.getElementById('nama').value;
+  let absen = document.getElementById('absen').value;
+  let email = document.getElementById('email').value;
+  let nohp = document.getElementById('nohp').value;
+  let kelas = document.getElementById('kelas').value;
+  let alamat = document.getElementById('alamat').value;
+  let hasilnama = document.getElementById('hasilnama').innerHTML = nama;
+  let hasilabsen = document.getElementById('hasilabsen').innerHTML = absen;
+  let hasilemail = document.getElementById('hasilemail').innerHTML = email;
+  let hasilnohp = document.getElementById('hasilnohp').innerHTML = nohp;
+  let hasilkelas = document.getElementById('hasilkelas').innerHTML = kelas;
+  let hasilalamat = document.getElementById('hasilalamat').innerHTML = alamat;
+
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Variabel Dan Tipe Data</title>
+  </head>
+  <body>
+    Nama :
+    <div id="nama"></div>
+    <br />
+    Umur :
+    <div id="umur"></div>
+    <br />
+    Status :
+    <div id="status"></div>
+    <br />
+    Link IG :
+    <a href="" id="url">
+      <div><button>Click Disini!</button></div></a
+    >
+
+    <script>
+      // membuat variabel
+      var nama = "Muhammad Afandi";
+      var umur = 16;
+      var status = true;
+      var url = "https://instagram.com/afandzo?igshid=YmMyMTA2M2Y=";
+
+      // let g = prompt("Masukkan Nama")
+      // var nama = g;
+      // let u = prompt("Masukkan Umur")
+      // var umur = u;
+      // let s = prompt("Masukkan Status (singel/taken)")
+      // var status = s;
+
+      var nama1 = (document.getElementById("nama").innerHTML = nama);
+      var umur1 = (document.getElementById("umur").innerHTML = umur);
+      var status1 = (document.getElementById("status").innerHTML = status);
+      var url1 = (document.getElementById("url").href = url);
+    </script>
+  </body>
+</html>

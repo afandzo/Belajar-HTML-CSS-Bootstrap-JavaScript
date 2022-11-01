@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>input</title>
+</head>
+<body>
+  <input type="number" id="jumlah">
+  <button type="button" onclick="cetak()">CETAK</button><br>
+  <ldiv for="" id="isi"></ldiv>
+
+  <script>
+  
+    function cetak() {
+    var jumlahcetak = document.getElementById('jumlah').value;
+    var tampil = document.getElementById('isi');
+    let text = " ";
+      for (jumlahcetak; jumlahcetak > 0; jumlahcetak--) {
+        text += "Saya sedang belajar JS" + "<br>";
+      }
+      tampil.innerHTML=text;
+    }
+    
+  </script>
+</body>
+</html>

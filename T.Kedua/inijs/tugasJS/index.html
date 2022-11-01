@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- CSS only -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+      crossorigin="anonymous"
+    />
+    <style>
+      .form-check{
+  padding-left: 7rem;
+}
+
+body {
+  background: linear-gradient(to top right,#b0b0b0,#ffffff);
+  color: black;
+}
+
+.dark-mode {
+  background: linear-gradient(to top right,#000000,#b0b0b0);
+  color: white;
+}
+    </style>
+  </head>
+  <!-- <body id="body">
+    <div class="form-check form-switch" onchange="bg()" id="bg">
+      <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked>
+      <label class="form-check-label" for="flexSwitchCheckChecked">Dark/Light mode</label>
+    </div> -->
+    
+    <!-- <button onclick="myFunction()">Toggle dark mode</button> -->
+
+    <div class="form-check form-switch" onclick="myFunction()">
+      <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked>
+      <label class="form-check-label" for="flexSwitchCheckChecked">Dark and Light mode</label>
+    </div>
+
+    <center><h1 style="padding-top: 5rem">Luas Bangun Datar</h1></center>
+
+    <!-- formulir -->
+    <div class="container">
+      <hr />
+      <form class="row g-3">
+        <!-- LUAS PERSEGI -->
+        <h3 style="padding-right: 7rem">Luas Persegi</h3>
+        <div class="col-md-6">
+          <label for="exampleInputEmail1" class="form-label"
+            >Sisi Persegi</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            id="sisi"
+            placeholder="Masukkan Sisi"
+          />
+        </div>
+        <center>
+          <button
+            type="button"
+            class="btn btn-primary mb-3"
+            onclick="luasPersegi()"
+          >
+            Hitung
+          </button>
+        </center>
+        <label for="">Luas Persegi = <label id="luasPersegi"></label></label>
+        
+        <hr />
+
+        <!-- LUAS PERSEGI PANJANG -->
+        <h3 style="padding-right: 7rem">Luas Persegi Panjang</h3>
+        <div class="col-md-6">
+          <label for="exampleInputEmail1" class="form-label"
+            >Panjang Persegi</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            id="panjang"
+            placeholder="Masukkan Panjang"
+          />
+        </div>
+        <div class="col-md-6">
+          <label for="exampleInputEmail1" class="form-label"
+            >Lebar Persegi</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            id="lebar"
+            placeholder="Masukkan Lebar"
+          />
+        </div>
+        <center>
+          <button type="button" class="btn btn-primary mb-3" onclick="luasPP()">
+            Hitung
+          </button>
+        </center>
+        <label for="">Luas Persegi Panjang = <label id="luasPersegiPanjang"></label></label>
+        
+        <hr />
+
+        <!-- LUAS LINGKARAN -->
+        <h3 style="padding-right: 7rem">Luas Lingkaran</h3>
+        <div class="col-md-6">
+          <label for="exampleInputEmail1" class="form-label"
+            >Jari-Jari Lingkaran</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            id="jari"
+            placeholder="Masukkan Jari-jari"
+          />
+        </div>
+        <center>
+          <button
+            type="button"
+            class="btn btn-primary mb-3"
+            onclick="luasLingkaran()"
+          >
+            Hitung
+          </button>
+        </center>
+        <label for="">Luas Lingkaran = <label id="luasLingkaran"></label></label>
+        
+        <hr />
+
+        <!-- LUAS SEGITIGA -->
+        <h3 style="padding-right: 7rem">Luas Segitiga</h3>
+        <div class="col-md-6">
+          <label for="exampleInputEmail1" class="form-label"
+            >Alas Segitiga</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            id="alas"
+            placeholder="Masukkan Alas"
+          />
+        </div>
+        <div class="col-md-6">
+          <label for="exampleInputEmail1" class="form-label"
+            >Tinggi Segitiga</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            id="tinggi"
+            placeholder="Masukkan Tinggi"
+          />
+        </div>
+        <center>
+          <button
+            type="button"
+            class="btn btn-primary mb-3"
+            onclick="luasSegitiga()"
+          >
+            Hitung
+          </button>
+        </center>
+        <label for="">Luas Segitiga = <label id="luasSegitiga"></label></label>
+        
+        <hr />
+      </form>
+    </div>
+
+    <!-- JavaScript Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+      crossorigin="anonymous"
+    ></script>
+    <script src="script.js"></script>
+  </body>
+</html>

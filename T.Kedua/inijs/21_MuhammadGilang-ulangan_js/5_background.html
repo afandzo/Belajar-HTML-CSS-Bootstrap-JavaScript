@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ubah Background</title>
+  <style>
+
+.dark-mode {
+  background-color: black;
+  color: white;
+}
+
+.light-mode {
+  background-color: white;
+  color: black;
+}
+
+.brown-mode {
+  background-color: rgb(68, 56, 56);
+  color: white;
+}
+
+.blue-mode {
+  background-color: #536cff;
+  color: black;
+}
+
+.red-mode {
+  background-color: #ff5353;
+  color: black;
+}
+
+.cyan-mode {
+  background-color: #80eeff;
+  color: black;
+}
+</style>
+</head>
+<body >
+  <h1>Ubah Background</h1>
+  <select name="" id="ubah" onchange="ubahbg()">
+    <option value="light">LIGHT</option>
+    <option value="dark">DARK</option>
+    <option value="brown">BROWN</option>
+    <option value="red">RED</option>
+    <option value="blue">BLUE</option>
+    <option value="cyan">CYAN</option>
+  </select>
+
+
+  <script>
+    function ubahbg() {
+    var pilih = document.getElementById('ubah').value;
+    var element = document.body;
+    if (pilih == 'dark') {
+      element.classList = 'dark-mode';
+    } else if (pilih == 'light') {
+      element.classList = 'light-mode';
+    } else if (pilih == 'brown') {
+      element.classList = 'brown-mode';
+    } else if (pilih == 'red') {
+      element.classList = 'red-mode';
+    } else if (pilih == 'blue') {
+      element.classList = 'blue-mode';
+    } else {
+      element.classList = 'cyan-mode';
+    }
+    }
+    
+  </script>
+</body>
+</html>

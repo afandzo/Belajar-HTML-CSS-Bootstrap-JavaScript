@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nilai</title>
+</head>
+<body>
+  <input type="number" name="" id="nilai" placeholder="Masukkan Nilai">
+  <button onclick="menentukan()">Tentukan nilai</button>
+
+
+  <script>
+    
+    function menentukan() {
+      let x = document.getElementById('nilai').value;
+      let nilai;
+      let tentu;
+      if (x>0 && x<=60) {
+        nilai='E';
+      }else if (x>60 && x<=70){
+        nilai='D';
+      }else if (x>70 && x<=80){
+        nilai='C';
+      }else if (x>80 && x<=90){
+        nilai='B';
+      }else if (x>90 && x<=100){
+        nilai='A';
+      } else{
+        nilai ='nilai yang anda masukkan tidak VALID';
+      }
+
+      if (nilai==='E' || nilai==='D'|| nilai==='C' && x<75) {
+        tentu = ' = Maaf Anda Tidak LULUS';
+      } else if (nilai==='A' || nilai==='B' || nilai==='C' && x >= 75) {
+        tentu = ' = Selamat Anda LULUS';
+      } else {
+        tentu = ''
+      }
+      // let hasil = document.getElementById('hasilnilai');
+      alert(x + ' = ' + nilai + tentu);
+    }
+  </script>
+</body>
+</html>
